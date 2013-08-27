@@ -27,6 +27,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 TARGET_NO_BOOTLOADER := true
 
 # Architecture
+TARGET_CPU_VARIANT := tegra2
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a
@@ -68,6 +69,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 # override recovery init.rc
 TARGET_RECOVERY_INITRC := device/samsung/p4-common/recovery/init.rc
+
+RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/p4-common/fstab.p3
 
 # Indicate that the board has an Internal SD Card
 BOARD_HAS_SDCARD_INTERNAL := true
