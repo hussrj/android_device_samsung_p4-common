@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-PRODUCT_LOCALES += tl_PH en_PH en_JP
-
 # Default value, if not overridden else where.
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/samsung/p4-common/bluetooth
 
