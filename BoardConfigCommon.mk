@@ -169,3 +169,7 @@ TW_NO_EXFAT := true
 SP1_NAME := "efs"
 SP1_BACKUP_METHOD := files
 SP1_MOUNTABLE := 1
+
+# init.d support
+PRODUCT_COPY_FILES += \
+	device/samsung/p4-common/prebuilt/etc/init.d/69romstats:system/etc/init.d/69romstats \
