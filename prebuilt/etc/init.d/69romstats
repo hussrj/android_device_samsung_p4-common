@@ -1,4 +1,0 @@
-#!/system/bin/sh
-
-# romstats
-	/system/app/romstats.apk;
