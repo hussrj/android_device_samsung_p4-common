@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+#delete android.romstats data folder
+rm -rf /data/data/android.romstats
+
