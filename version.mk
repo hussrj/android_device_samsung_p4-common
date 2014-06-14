@@ -4,6 +4,10 @@ ROM_MOD := 06
 ROMSTAT_VER := V$(ROM_VERSION).$(ROM_MOD)
 GOO_VER := $(ROM_VERSION)$(ROM_MOD)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.romstats.version=$(ROMSTAT_VER) \
+	ro.goo.version=$(GOO_VER)
+	
 # BeeGee properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.google.clientidbase=android-google \
@@ -47,13 +51,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 \
 
 # BeeGee statistics
 PRODUCT_PACKAGES += \
-    romstats \
-    SimpleExplorer
+    romstats
 
 # trick squisher to use smaller boot animation for this device
 # and get some additional usefull apks into the ROM
 PRODUCT_NO_BOOTANIMATION := true
 PRODUCT_COPY_FILES += \
-	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
-#	device/samsung/p4-common/prebuilt/apks/romstats.apk:system/app/romstats.apk \
-#	device/samsung/p4-common/prebuilt/apks/SimpleExplorer.apk:system/app/SimpleExplorer.apk \
+	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip 
