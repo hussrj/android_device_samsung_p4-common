@@ -57,4 +57,5 @@ PRODUCT_PACKAGES += \
 # and get some additional usefull apks into the ROM
 PRODUCT_NO_BOOTANIMATION := true
 PRODUCT_COPY_FILES += \
-	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip 
+	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
+    $(LOCAL_PATH)/prebuilt/app/romstats.apk:system/app/romstats.apk
