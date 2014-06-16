@@ -51,11 +51,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 \
 
 # BeeGee statistics
 PRODUCT_PACKAGES += \
-    romstats
+    romstats \
+    SimpleExplorer
 
 # trick squisher to use smaller boot animation for this device
 # and get some additional usefull apks into the ROM
 PRODUCT_NO_BOOTANIMATION := true
 PRODUCT_COPY_FILES += \
-	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
-    $(LOCAL_PATH)/prebuilt/app/romstats.apk:system/app/romstats.apk
+	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
