@@ -1,8 +1,14 @@
 # Don't forget to update the version number!
-ROM_VERSION := 1
-ROM_MOD := 06
-ROMSTAT_VER := V$(ROM_VERSION).$(ROM_MOD)
-GOO_VER := $(ROM_VERSION)$(ROM_MOD)
+# Versions should come from batch file now
+# ROM_VERSION := 1
+# ROM_MOD := 06
+$(warning "*****************")
+$(warning $(ROM_VERSION))
+$(warning $(ROM_MOD))
+$(warning "*****************")
+
+ROMSTAT_VER := V$(ROM_VERSION)
+GOO_VER := $(ROM_MOD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.romstats.version=$(ROMSTAT_VER) \
@@ -58,4 +64,5 @@ PRODUCT_PACKAGES += \
 # and get some additional usefull apks into the ROM
 PRODUCT_NO_BOOTANIMATION := true
 PRODUCT_COPY_FILES += \
-	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+	device/samsung/p4-common/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
+	device/samsung/p4-common/prebuilt/app/SimpleExplorer.apk:system/app/SimpleExplorer.apk
